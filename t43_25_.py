@@ -39,5 +39,5 @@ save_stdin = sys.stdin
 sys.stdin = open("in/43.in")
 
 pass # замените pass на код решения данной задачи
-
+      
 sys.stdin = save_stdin

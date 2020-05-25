@@ -38,6 +38,21 @@ import sys
 save_stdin = sys.stdin
 sys.stdin = open("in/43.in")
 
-pass # замените pass на код решения данной задачи
-
+min_ch = 60001
+min_nch = 60001
+N = int(input())
+a = [int(input()) for i in range(N)]
+for i in range(N-1):
+  for j in range(i + 1, N):
+    s = a[i] + a[j]
+    if s % 2 == 0 and s < min_ch:
+      min_ch = s
+    if s % 2 != 0 and s < min_nch:
+      min_nch = s
+if min_ch < 6001:
+  print(min_ch)
+else:
+  print(min_nch)
+      
 sys.stdin = save_stdin
+
